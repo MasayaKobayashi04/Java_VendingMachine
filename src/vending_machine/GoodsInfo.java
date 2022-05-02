@@ -91,6 +91,10 @@ class GoodsInfo {
 		return size; // 返却
 	}
 	
+	/**
+	 * 在庫商品の最低価格を返すメソッド
+	 * @return under_price (最低価格)
+	 */
 	int returnGoodsUnderPrice() {
 		int price[] = new int[list.size()];
 		for (int i = 0; i < list.size(); i++) {
@@ -107,6 +111,10 @@ class GoodsInfo {
 		return under_price;
 	}
 	
+	/**
+	 * 全商品の在庫が0になってないか確認するメソッド
+	 * @return result (全部0ならtrue)
+	 */
 	boolean returnGoodsStock() {
 		boolean result = false;
 		for (int i = 0; i < list.size(); i++) {

@@ -48,9 +48,9 @@ public class Vendingmachine {
 		this.under_price = gi.returnGoodsUnderPrice();
 
 		for (;;) {
-			if (balance >= under_price) {
-				this.result = gi.returnGoodsStock();
-				if (result == false) {
+			if (balance >= under_price) { // 残高が最低価格を下回っていないかの確認
+				this.result = gi.returnGoodsStock(); 
+				if (result == false) { // 在庫数が全部0でなければ実行
 					System.out.println("      いらっしゃいませ      ");
 					System.out.println("==========商品一覧==========");
 
